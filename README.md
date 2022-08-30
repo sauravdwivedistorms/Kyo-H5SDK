@@ -3,7 +3,7 @@ Kyō H5SDK is lightweight library that is supposed to seamlessly bind Kyō Web A
 Current API CDN https://assets.skibbre.com/media/h5Sdk.js
 
 The recommended way to use it in your game is to simply add it as third party script.
-```
+```js
 <head>
 <!-- ... -->
 <script type="text/javascript" src="https://assets.kyo.games/h5Sdk.js"></script>
@@ -19,7 +19,7 @@ When added, it creates ```window.H5SDK``` global object that contains methods to
   
   For example:
   
-  ```
+  ```js
   constructor() {
     // ...
     H5SDK.init();
@@ -32,7 +32,7 @@ When added, it creates ```window.H5SDK``` global object that contains methods to
   If string or float numeric value is sent, there will be an attempt to convert to an integer using ```parseInt```
   
   For example:
-  ```
+  ```js
   // random method name that calls game score sreen logic 
   showGameScore() {
     // ...
