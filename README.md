@@ -1,6 +1,7 @@
 # Kyō H5SDK
 Kyō H5SDK is lightweight library that is supposed to seamlessly bind Kyō Web App and Android/iOS App with hosted games via postMessage protocol.
-Current API CDN https://assets.skibbre.com/media/h5Sdk.js
+
+Current API CDN https://assets.kyo.games/h5Sdk.js
 
 The recommended way to use it in your game is to simply add it as third party script.
 ```js
@@ -29,14 +30,22 @@ When added, it creates ```window.H5SDK``` global object that contains methods to
 * ```H5SDK.submit({ SCORE: <value> , SCORE_DATA: <JSON value>})```
   
   On every game level end or when the game is over it sends a message about the user's current game score. Where ```<value>``` - numeric integer value of the current game score. 
-  If string or float numeric value is sent, there will be an attempt to convert to an integer using ```parseInt```
+  If string or float numeric value is sent, there will be an attempt to convert to an integer using ```parseInt```.
+  ```<JSON value>``` - JSON which contains score data of every 30th second. Both key and values should be a numeric integer value
   
   For example:
   ```js
   // random method name that calls game score sreen logic 
   showGameScore() {
     // ...
-    H5SDK.submit({ SCORE: 128 });
+    H5SDK.submit({ 
+      SCORE: 28,
+      SCORE_DATA: {
+        30: 5,
+        60: 10,
+        90: 25
+      }
+    });
     // ...
   }
   ```
