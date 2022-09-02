@@ -33,6 +33,7 @@ When added, it creates ```window.H5SDK``` global object that contains methods to
   If string or float numeric value is sent, there will be an attempt to convert to an integer using ```parseInt```.
   
   ```<JSON value>``` - JSON which contains score data of every 30th second. Both key and values should be a numeric integer value
+  Passing ```SCORE_DATA``` is optional for now.
   
   For example:
   ```js
