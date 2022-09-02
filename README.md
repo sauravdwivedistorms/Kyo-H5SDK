@@ -1,13 +1,13 @@
 # Kyō H5SDK
 Kyō H5SDK is lightweight library that is supposed to seamlessly bind Kyō Web App and Android/iOS App with hosted games via postMessage protocol.
 
-Current Static CDN https://assets.kyo.games/h5Sdk.js
+Current Static CDN https://assets.kyo.games/H5SDK.js
 
 The recommended way to use it in your game is to simply add it as third party script.
 ```js
 <head>
 <!-- ... -->
-<script type="text/javascript" src="https://assets.kyo.games/h5Sdk.js"></script>
+<script type="text/javascript" src="https://assets.kyo.games/H5SDK.js"></script>
   <!-- ... -->
 </head>
 ```
