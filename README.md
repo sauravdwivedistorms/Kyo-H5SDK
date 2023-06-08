@@ -27,6 +27,11 @@ When added, it creates ```window.H5SDK``` global object that contains methods to
     // ...
   }
   ```
+* ```H5SDK.update({ SCORE: <value>})```
+ 
+  On score update, send the message with the new score. This helps to keep a log of scores, every 5 seconds which helps the backend to detect anomalies. For now, this call is optional.
+  
+
 * ```H5SDK.submit({ SCORE: <value> , SCORE_DATA: <JSON value>})```
   
   Call this function when the game is over. It sends a message about the user's game score and score data. Where ```<value>``` - numeric integer value of the current game score. 
@@ -35,7 +40,7 @@ When added, it creates ```window.H5SDK``` global object that contains methods to
   ```<JSON value>``` - JSON which contains score data of every 30th second. Both key and values should be a numeric integer value.
   
   
-  Passing ```SCORE_DATA``` is optional for now.
+  Passing ```SCORE_DATA``` isn't required anymore.
   
   For example:
   ```js
@@ -43,12 +48,7 @@ When added, it creates ```window.H5SDK``` global object that contains methods to
   showGameScore() {
     // ...
     H5SDK.submit({ 
-      SCORE: 28,
-      SCORE_DATA: {
-        30: 5,
-        60: 10,
-        90: 25
-      }
+      SCORE: 28
     });
     // ...
   }
